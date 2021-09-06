@@ -23,10 +23,19 @@ namespace SocketServer.Rooms
             var socketClient = new SocketClient(message.Origin, client);
             _clients.Add(message.Origin, socketClient);
             _clients.SkipWhile(x => x.Key == message.Origin).ToList().ForEach(x => x.Value.SendMessage(new SocketMessageProtocol(message.Origin, Encoding.UTF8.GetBytes($"{message.Origin} just joined the Global Chat Room "))));
+            StartUserChat(socketClient);
         }
-        private async Task StartUserChat(SocketClient socketClient)
-        {
 
+        private void StartUserChat(SocketClient socketClient)
+        {
+            _ = Task.Run(async () =>
+            {
+                while (true)
+                {
+                    var msg = await socketClient.ReceiveMessage<SocketMessageProtocol>();
+                    _clients.SkipWhile(x => x.Key == msg.Origin).ToList().ForEach(x => x.Value.SendMessage(msg));
+                }
+            });
         }
     }
 }
