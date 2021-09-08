@@ -5,11 +5,11 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KashkeshetUI", "KashkeshetUI\KashkeshetUI.csproj", "{B3B318D1-7539-4281-80A9-C773269A5055}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocketServer", "SocketServer\SocketServer.csproj", "{D23ED207-93C6-4CE4-A675-7426B1265E06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocketServer", "SocketServer\SocketServer.csproj", "{D23ED207-93C6-4CE4-A675-7426B1265E06}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KashkeshetCommon", "KashkeshetCommon\KashkeshetCommon.csproj", "{D15F1037-211A-4B7E-99DA-A04E36393BA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KashkeshetCommon", "KashkeshetCommon\KashkeshetCommon.csproj", "{D15F1037-211A-4B7E-99DA-A04E36393BA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIConsole", "UIConsole\UIConsole.csproj", "{C125A07A-D469-4F9E-A093-49E6D3AF7C29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UIConsole", "UIConsole\UIConsole.csproj", "{C125A07A-D469-4F9E-A093-49E6D3AF7C29}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -19,7 +19,6 @@ namespace UIConsole
 
             SocketProtocol a = new SocketProtocol();
             await Sender(userName, stream, a);
-
                 _ = Task.Run(async () =>
                 {
                     await Reciever(stream, a);
@@ -28,8 +27,6 @@ namespace UIConsole
             {
                 await SendToServer(userName, stream, a);
             }
-
-
         }
 
         private static async Task Sender(string userName, NetworkStream stream, SocketProtocol a)

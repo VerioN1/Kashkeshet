@@ -33,7 +33,7 @@ namespace SocketServer.Rooms
                 while (true)
                 {
                     var msg = await socketClient.ReceiveMessage<SocketMessageProtocol>();
-                    _clients.SkipWhile(x => x.Key == msg.Origin).ToList().ForEach(x => x.Value.SendMessage(msg));
+                    _clients.Keys.ToList().Where(x => x != msg.Origin).ToList().ForEach(x => _clients[x].SendMessage(msg));
                 }
             });
         }

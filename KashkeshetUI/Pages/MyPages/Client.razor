@@ -1,0 +1,12 @@
+﻿@page "/Socket/Client"
+@using KashkeshetCommon.MessageProtocol
+<h3>Client</h3>
+
+@code {
+    private List<SocketMessageProtocol> messages;
+    protected override async Task OnInitializedAsync()
+    {
+        messages = new List<SocketMessageProtocol>();
+    }
+
+}
